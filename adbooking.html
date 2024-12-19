@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <title>Advance Booking</title>
+</head>
+<body>
+  <!-- Header -->
+  <div class="container-fluid bg-dark text-white p-3 text-center">
+    <h1>Advance Booking - Villa Imelda Farm Resort</h1>
+    <p>Book your stay in advance and enjoy the best offers!</p>
+  </div>
+
+  <!-- Booking Form -->
+  <div class="container mt-5">
+    <h2 class="text-center mb-4">Book Your Stay</h2>
+    <form action="submit-booking.html" method="POST">
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="checkInDate">Check-in Date</label>
+          <input type="date" class="form-control" id="checkInDate" name="check_in_date" required>
+        </div>
+        <div class="form-group col-md-6">
+          <label for="checkOutDate">Check-out Date</label>
+          <input type="date" class="form-control" id="checkOutDate" name="check_out_date" required>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="roomType">Room Type</label>
+        <select id="roomType" class="form-control" name="room_type" required>
+          <option selected disabled>Choose...</option>
+          <option value="Family Room">Family Room</option>
+          <option value="Premium King Room">Premium King Room</option>
+          <option value="Deluxe Suite">Deluxe Suite</option>
+        </select>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="guests">Number of Guests</label>
+          <input type="number" class="form-control" id="guests" name="guests" min="1" max="10" required>
+        </div>
+        <div class="form-group col-md-6">
+          <label for="email">Email</label>
+          <input type="email" class="form-control" id="email" name="email" required>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="specialRequests">Special Requests</label>
+        <textarea class="form-control" id="specialRequests" name="special_requests" rows="3"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary btn-block">Submit Booking</button>
+    </form>
+  </div>
+
+  <!-- Footer -->
+  <div class="container-fluid bg-dark text-white text-center p-3 mt-5">
+    <p>&copy; 2024 Villa Imelda Farm Resort. All Rights Reserved.</p>
+  </div>
+</body>
+</html>
